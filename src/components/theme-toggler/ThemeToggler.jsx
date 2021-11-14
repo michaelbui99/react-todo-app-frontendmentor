@@ -14,6 +14,7 @@ const ThemeToggler = ({ theme, setTheme }) => {
           ? "../../assets/icon-sun.svg"
           : "../../assets/icon-moon.svg"
       }
+      alt="theme switch"
     />
   );
 };
