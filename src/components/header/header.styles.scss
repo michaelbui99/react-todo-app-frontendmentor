@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+  h1 {
+    letter-spacing: 10px;
+    position: relative;
+    z-index: 2;
+    font-weight: bold;
+  }
+}

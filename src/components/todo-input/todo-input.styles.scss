@@ -1,0 +1,26 @@
+.todo-input {
+  width: 100%;
+  position: relative;
+  z-index: 2;
+
+  input {
+    color: rgb(223, 223, 223);
+    background-color: rgb(54, 50, 50);
+    z-index: 2;
+    position: relative;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    height: 3rem;
+    padding: 0.5rem 2rem;
+    font-size: 24px;
+    outline: none;
+    border-width: 0 0 2px 0;
+    border-color: rgb(54, 50, 50);
+    transition: all 0.3s ease-in-out;
+
+    &:focus {
+      border-color: white;
+    }
+  }
+}
