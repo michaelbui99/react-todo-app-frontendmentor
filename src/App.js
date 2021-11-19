@@ -9,6 +9,7 @@ function App() {
   const [theme, setTheme] = useState("dark");
   const [allTodos, setAlltodos] = useState([
     { id: 1, description: "Something", completed: false },
+    { id: 2, description: "Something2", completed: false },
   ]);
   const [todosToShow, setTodosToShow] = useState(allTodos);
   return (

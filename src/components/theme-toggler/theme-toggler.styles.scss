@@ -1,0 +1,9 @@
+svg.theme-icon {
+  width: 1.3rem;
+  height: 1.3rem;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  &:hover {
+    filter: brightness(0.5);
+  }
+}

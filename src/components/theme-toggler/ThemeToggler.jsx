@@ -1,3 +1,6 @@
+import "./theme-toggler.styles.scss";
+import { FiSun, FiMoon } from "react-icons/fi";
+
 const ThemeToggler = ({ theme, setTheme }) => {
   const handleClick = () => {
     if (theme === "dark") {
@@ -8,14 +11,13 @@ const ThemeToggler = ({ theme, setTheme }) => {
   };
 
   return (
-    <img
-      src={
-        theme === "dark"
-          ? "../../assets/icon-sun.svg"
-          : "../../assets/icon-moon.svg"
-      }
-      alt="theme switch"
-    />
+    <>
+      {theme === "dark" ? (
+        <FiSun className="theme-icon" />
+      ) : (
+        <FiMoon className="theme-icon" />
+      )}
+    </>
   );
 };
 
