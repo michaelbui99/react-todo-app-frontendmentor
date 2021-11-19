@@ -1,0 +1,11 @@
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 3px;
+  height: 60vh;
+  p.todo-item {
+    background-color: #363232;
+    padding: 1rem 1rem;
+  }
+}

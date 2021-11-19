@@ -3,6 +3,7 @@ import TodoInput from "./components/todo-input/TodoInput";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import "./App.scss";
+import TodoList from "./components/todo-list/TodoList";
 
 function App() {
   const [theme, setTheme] = useState("dark");
@@ -15,9 +16,11 @@ function App() {
       <div className="background-image" />
       <div className="app-container">
         <Header theme={theme} setTheme={setTheme} />
-        <div style={{ marginTop: "2rem" }}>
+        <div style={{ marginTop: "2rem", marginBottom: "1rem" }}>
           <TodoInput setAllTodos={setAlltodos} allTodos={allTodos} />
         </div>
+
+        <TodoList todos={allTodos} />
       </div>
       <Footer />
     </div>
