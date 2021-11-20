@@ -21,7 +21,7 @@ function App() {
           <TodoInput setAllTodos={setAlltodos} allTodos={allTodos} />
         </div>
 
-        <TodoList todos={allTodos} />
+        <TodoList todos={allTodos} setTodos={setAlltodos} />
       </div>
       <Footer />
     </div>
