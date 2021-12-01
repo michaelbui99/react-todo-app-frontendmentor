@@ -3,6 +3,11 @@ import { AiOutlineCheckCircle, AiFillCheckCircle } from "react-icons/ai";
 const TodoItem = ({ todo, setTodos, todos }) => {
   const toggleTodoComplete = () => {
     //TODO: find a way to toggle a TodoItem in the todos array and then update the Todos state
+    setTodos(
+      todos.map((t) =>
+        t.id === todo.id ? (todo = { ...todo, completed: !todo.completed }) : t
+      )
+    );
   };
 
   return (
