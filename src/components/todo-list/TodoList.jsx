@@ -15,7 +15,7 @@ const TodoList = ({ todos, setTodos }) => {
         )}
       </div>
 
-      <TodoFooter todos={todos} />
+      <TodoFooter todos={todos} setTodos={setTodos} />
     </div>
   );
 };
