@@ -2,11 +2,13 @@ import "./todo-list.styles.scss";
 import TodoFooter from "../todo-footer/TodoFooter";
 import TodoItem from "../todo-item/TodoItem";
 
-const TodoList = ({ todos }) => {
+const TodoList = ({ todos, setTodos }) => {
   return (
     <div className="todo-list">
       {todos.length > 0 ? (
-        todos.map((t) => <TodoItem todo={t} key={t.id} />)
+        todos.map((t) => (
+          <TodoItem todo={t} key={t.id} setTodos={setTodos} todos={todos} />
+        ))
       ) : (
         <p className="todo-item">No todos to show...</p>
       )}
