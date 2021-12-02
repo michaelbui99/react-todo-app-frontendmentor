@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TodoInput from "./components/todo-input/TodoInput";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
@@ -12,6 +12,9 @@ function App() {
     { id: 2, description: "Something2", completed: false },
   ]);
   const [todosToShow, setTodosToShow] = useState(allTodos);
+  useEffect(() => {
+    setTodosToShow(allTodos);
+  }, [allTodos]);
   return (
     <div className="app">
       <div className="background-image" />
@@ -21,7 +24,12 @@ function App() {
           <TodoInput setAllTodos={setAllTodos} allTodos={allTodos} />
         </div>
 
-        <TodoList todos={allTodos} setTodos={setAllTodos} />
+        <TodoList
+          todos={allTodos}
+          setTodos={setAllTodos}
+          todosToShow={todosToShow}
+          setTodosToShow={setTodosToShow}
+        />
       </div>
       <Footer />
     </div>

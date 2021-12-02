@@ -35,5 +35,9 @@
   .delete-todo {
     position: absolute;
     right: 2rem;
+    &:hover {
+      color: rgb(226, 30, 30);
+      filter: brightness(1.2);
+    }
   }
 }
