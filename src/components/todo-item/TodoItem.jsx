@@ -1,5 +1,9 @@
 import "./todo-item.styles.scss";
-import { AiOutlineCheckCircle, AiFillCheckCircle } from "react-icons/ai";
+import {
+  AiOutlineCheckCircle,
+  AiFillCheckCircle,
+  AiFillDelete,
+} from "react-icons/ai";
 const TodoItem = ({ todo, setTodos, todos }) => {
   const toggleTodoComplete = () => {
     //TODO: find a way to toggle a TodoItem in the todos array and then update the Todos state
@@ -10,6 +14,10 @@ const TodoItem = ({ todo, setTodos, todos }) => {
     );
   };
 
+  const deleteTodo = () => {
+    setTodos(todos.filter((t) => t.id !== todo.id));
+  };
+
   return (
     <div className="todo-item">
       {todo.completed ? (
@@ -18,6 +26,8 @@ const TodoItem = ({ todo, setTodos, todos }) => {
         <AiOutlineCheckCircle onClick={toggleTodoComplete} />
       )}
       {todo.completed ? <s>{todo.description}</s> : <p>{todo.description}</p>}
+
+      <AiFillDelete className="delete-todo" onClick={deleteTodo} />
     </div>
   );
 };
